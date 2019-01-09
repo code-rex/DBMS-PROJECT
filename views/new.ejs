@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 >Add a New Course </h1>
+        <div style="width:30%; margin:20 auto;">
+
+        <form action="/courses" method="POST">
+            <div class="form-group"><input class="form-control" type="text" name="name" placeholder="name"></div>
+            <div class="form-group"><input  class="form-control" type="text" name="download" placeholder="Download_link"></div>
+            <div class="form-group"><input  class="form-control" type="text" name="description" placeholder="Description"></div>
+            <div class="form-group"><button class="btn btn-lg btn-default btn-block"> Add a Course </button></div>
+        </form>
+        
+        <a href="/courses">Back</a>
+    </div>
+</div>
+<% include ./partials/footer %>

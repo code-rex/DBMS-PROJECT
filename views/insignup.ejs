@@ -1,0 +1,51 @@
+<% include ./partials/header %>
+<body style="background:url('https://blitzen.com/blog/wp-content/uploads/new-tech.jpg'); background-repeat: no-repeat; background-position: center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: cover;
+  color:white">
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Create an Account</h1>
+        </div>
+        <h3 style="text-align: center">Instructor</h3>
+        <div style="width:30%; margin:25px auto;">
+            <!-- show any messages that come back with authentication -->
+	            <% if (message.length > 0) { %>
+		            <div class="alert alert-danger"><%= message %></div>
+	            <% } %>
+	            
+        <form action="/instructors/signup" method="POST">
+            <div class="form-group">
+                            <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Your First Name"/>
+            </div>
+			<div class="form-group">
+                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Your Last Name"/>
+            </div>
+			<div class="form-group">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
+            </div>
+            <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"/>
+            </div>
+			<div class="form-group">
+                            <input type="text" class="form-control" name="phone_number" id="phone_number" placeholder="Your Phone Number"/>
+            </div>
+			<div class="form-group">
+                            <input type="text" class="form-control" name="address" id="address" placeholder="Your Addresss"/>
+            </div>
+            <div class="form-group">
+                            <input type="text" class="form-control" name="password" id="password" placeholder="Password"/>
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+            </div>
+            <div class="form-group">
+                            <button type="submit" class="btn btn-outline-success btn-md"> Submit </button>
+            </div>
+        </form>
+        
+        <hr>
+        <p>Already have an Account?  <a href="/instructors/login">Login</a></p>
+        <a href="/courses">Back</a>
+    </div>
+<% include ./partials/footer %>

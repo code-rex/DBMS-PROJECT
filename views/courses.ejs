@@ -1,0 +1,48 @@
+<% include ./partials/header.ejs %>
+<br>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to All Courses</h1>
+            <p>A Learning Management Web-App</p>
+            <p>
+              <a class="btn btn-outline-primary" href="/courses/new">Add a New Course</a>
+              
+            </p>
+        </div>
+    </header>
+    
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">S.no</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Download link</th>
+      <th scope="col">Enroll</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% if(data.length){ %>
+         <% for(var i = 0;i < data.length;i++) { %>
+         <tr>
+            <th scope="row"><%=(i+1)%></td>
+            <td><%=data[i].course_name%></td>
+            <td><%=data[i].about%></td>
+            <td><a href="<%=data[i].download %>"><button type="button" class="btn btn-outline-success">Link</button></td>
+            <td><a href="/courses/<%=data[i].course_id%>/enroll"><button type="submit" class="btn btn-outline-primary" >Enroll</button></a></td>
+            <td><a href="/courses/<%=data[i].course_id%>/delete"><button type="submit" class="btn btn-outline-danger" >Remove</button></a></td>
+        </tr>
+         <% }
+      }else{ %>
+         <tr>
+            <td colspan="3">No Courses</td>
+          </tr>
+        <% } %>
+  </tbody>
+ </table>
+  
+<% include ./partials/footer.ejs %>
+</div>
