@@ -1,2 +1,6 @@
 # DBMS-PROJECT
 DBMS Project
+LANGUAGE-NODE JS
+FRAMEWORK - EXPRESS
+DATABASE -MYSQL
+USE AWS CLOUD9/CLOUD9 and npm install package.json library file
