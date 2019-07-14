@@ -1,6 +1,10 @@
 # DBMS-PROJECT
-DBMS Project
-LANGUAGE-NODE JS
-FRAMEWORK - EXPRESS
-DATABASE -MYSQL
-USE AWS CLOUD9/CLOUD9 and npm install package.json library file
+
+## Web Development 
+
+* LANGUAGE - NODE JS
+* FRAMEWORK - EXPRESS
+* DATABASE - MYSQL
+* HTML,CSS,JAVASCRIPT,Bootstrap for frontend
+
+Usage : USE AWS CLOUD9/CLOUD9 and npm install package.json library file
